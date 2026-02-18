@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, 'Segoe UI', 'Noto Sans KR', sans-serif;
+    color: #2c3e50;
+    line-height: 1.7;
+    background: #f8f9fa;
+}
+
+main {
+    max-width: 210mm;
+    margin: 0 auto;
+    background: #fff;
+    padding: 3rem 3.5rem;
+    min-height: 100vh;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Back link */
+.back-link {
+    position: fixed;
+    top: 1.5rem;
+    left: 1.5rem;
+    text-decoration: none;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+    z-index: 10;
+}
+
+.back-link:hover {
+    color: #1a2332;
+}
+
+/* Header */
+.resume-header {
+    text-align: center;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid #1a2332;
+    margin-bottom: 2rem;
+}
+
+.resume-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a2332;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.3rem;
+}
+
+.resume-header .title {
+    font-size: 1.05rem;
+    color: #546e7a;
+    font-weight: 400;
+    margin-bottom: 0.8rem;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.9rem;
+}
+
+.contact-info a {
+    color: #1a2332;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.contact-info .separator {
+    color: #bdc3c7;
+}
+
+/* Sections */
+section {
+    margin-bottom: 1.8rem;
+}
+
+section h2 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #1a2332;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #dee2e6;
+    margin-bottom: 1rem;
+}
+
+/* Profile */
+.profile-summary {
+    color: #4a5568;
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+/* Timeline */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 1.5rem;
+}
+
+.timeline-date {
+    font-size: 0.85rem;
+    color: #7f8c8d;
+    padding-top: 0.15rem;
+    white-space: nowrap;
+}
+
+.timeline-content h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1a2332;
+    margin-bottom: 0.3rem;
+}
+
+.timeline-content .position {
+    font-weight: 400;
+    color: #546e7a;
+}
+
+.timeline-content p {
+    color: #4a5568;
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+}
+
+.timeline-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.timeline-content li {
+    font-size: 0.9rem;
+    color: #4a5568;
+    padding: 0.15rem 0;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.timeline-content li::before {
+    content: '\2022';
+    position: absolute;
+    left: 0;
+    color: #95a5a6;
+}
+
+/* Skills */
+.skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.skill-row {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.skill-category {
+    font-weight: 600;
+    color: #1a2332;
+}
+
+.skill-items {
+    color: #4a5568;
+}
+
+/* Tech tags */
+.tech-tags {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    margin-top: 0.3rem;
+}
+
+.tech-tags span {
+    font-size: 0.8rem;
+    color: #546e7a;
+    background: #f1f3f5;
+    padding: 0.15rem 0.6rem;
+    border-radius: 3px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    main {
+        padding: 2rem 1.5rem;
+    }
+
+    .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 0.2rem;
+    }
+
+    .timeline-date {
+        font-weight: 600;
+        color: #546e7a;
+    }
+
+    .skill-row {
+        grid-template-columns: 1fr;
+        gap: 0.2rem;
+    }
+
+    .back-link {
+        position: static;
+        display: inline-block;
+        padding: 1rem 1.5rem 0;
+    }
+}
+
+/* Print */
+@media print {
+    body {
+        background: #fff;
+    }
+
+    main {
+        box-shadow: none;
+        padding: 0;
+        max-width: 100%;
+    }
+
+    .back-link {
+        display: none;
+    }
+
+    section {
+        margin-bottom: 1.2rem;
+        break-inside: avoid;
+    }
+
+    @page {
+        size: A4;
+        margin: 15mm 20mm;
+    }
+}
