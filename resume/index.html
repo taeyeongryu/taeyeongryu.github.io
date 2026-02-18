@@ -3,116 +3,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>류태영 | Resume</title>
+    <title>유태영 — Backend Developer</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main>
-        <header class="resume-header">
-            <h1>류태영</h1>
-            <p class="title">Backend Developer</p>
-            <div class="contact-info">
-                <a href="https://github.com/taeyeongryu" target="_blank">github.com/taeyeongryu</a>
-                <span class="separator">|</span>
-                <a href="mailto:your-email@example.com">your-email@example.com</a>
+    <div class="resume">
+        <!-- Header -->
+        <header class="header">
+            <div class="header__text">
+                <h1 class="header__name">유태영</h1>
+                <p class="header__role">Backend Developer</p>
+                <ul class="header__contact">
+                    <li><a href="https://github.com/taeyeongryu" target="_blank" rel="noopener">github.com/taeyeongryu</a></li>
+                    <li><a href="https://gbarry.tistory.com" target="_blank" rel="noopener">gbarry.tistory.com</a></li>
+                    <li><a href="mailto:tybam@naver.com">tybam@naver.com</a></li>
+                </ul>
             </div>
+            <img src="profile.jpg" alt="유태영 프로필 사진" class="header__photo">
         </header>
 
-        <section>
-            <h2>PROFILE</h2>
-            <p class="profile-summary">
-                백엔드 개발에 관심이 많은 개발자입니다. Java/Spring Boot 기반의 웹 애플리케이션 개발 경험이 있으며,
-                안정적이고 확장 가능한 서비스를 만드는 것을 목표로 합니다.
-            </p>
+        <!-- Profile -->
+        <section class="section">
+            <h2 class="section__title">Profile</h2>
+            <p class="profile__headline">시간당 <strong>20억 건</strong>의 트래픽을 다루는<br>백엔드 개발자.</p>
+            <p class="profile__sub">Kubernetes·GitOps 도입으로 배포 시간 <strong>1/3 단축</strong>.<br>백엔드 역량에 인프라 이해를 더해 확장 가능한 서비스를 만듭니다.</p>
         </section>
 
-        <section>
-            <h2>EXPERIENCE</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">2025.01 &mdash; 현재</div>
-                    <div class="timeline-content">
-                        <h3>회사명 <span class="position">/ 백엔드 개발자</span></h3>
-                        <ul>
-                            <li>Spring Boot 기반 REST API 설계 및 개발</li>
-                            <li>MySQL 데이터베이스 설계 및 쿼리 최적화</li>
-                            <li>Docker를 활용한 배포 환경 구축</li>
-                        </ul>
+        <!-- Experience -->
+        <section class="section">
+            <h2 class="section__title">Experience</h2>
+
+            <div class="company">
+                <div class="company__header">
+                    <div class="company__info">
+                        <h3 class="company__name">(주)모비젠</h3>
+                        <span class="company__position">정규직 · <span id="career-duration"></span></span>
+                    </div>
+                    <span class="company__date">2024.04 — 재직중</span>
+                </div>
+
+                <!-- Project 1 -->
+                <div class="project">
+                    <div class="project__header">
+                        <h4 class="project__title">SKT 대규모 서버 모니터링 솔루션 운영 및 성능 최적화</h4>
+                        <span class="project__date">2025.01 — 2025.12</span>
+                    </div>
+                    <p class="project__desc">시간당 약 20억 건(TPS 약 55만 건)의 메트릭 데이터가 유입되는 대규모 트래픽 환경의 모니터링 시스템 운영.</p>
+                    <ul class="project__bullets">
+                        <li>Spring Boot(Backend)와 Vue.js(Frontend) 기반의 모니터링 대시보드 및 수집기 기능 개선</li>
+                        <li>시간당 20억 건의 로그 및 메트릭 데이터가 유실 없이 처리되도록 병목 구간을 지속적으로 개선하여 무중단 운영 지원</li>
+                        <li>슬로우 쿼리 분석 및 실행 계획(Explain) 기반 인덱스 재설계로 대시보드 조회 속도 개선</li>
+                        <li>Vue.js 관제 화면의 대량 데이터 시각화 시 렌더링 지연 최적화</li>
+                    </ul>
+                    <div class="project__tags">
+                        <span class="tag">Java</span>
+                        <span class="tag">Spring Framework</span>
+                        <span class="tag">Vue.js</span>
+                        <span class="tag">MariaDB</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project">
+                    <div class="project__header">
+                        <h4 class="project__title">Kubernetes 환경 GitOps 프로세스 도입</h4>
+                        <span class="project__date">2025.01 — 2025.02</span>
+                    </div>
+                    <p class="project__desc">잦은 YAML 파일 수정과 명령형 관리 방식으로 인한 설정 불일치 및 히스토리 관리의 어려움 해결.</p>
+                    <ul class="project__bullets">
+                        <li>기존 수동 관리 방식을 Git 기반 선언형 관리 방식으로 전환 제안 및 주도</li>
+                        <li>Helm Chart, Manifest, Values를 분리하는 디렉토리 구조 설계 및 팀 컨벤션 수립</li>
+                        <li>모든 매니페스트를 Git으로 관리하여 변경 이력 추적 및 즉각적 Rollback 환경 마련</li>
+                        <li>입사 1년 미만의 주니어로서 문제점을 발견하고 해결책을 제시, 팀 개발 프로세스 체계화</li>
+                    </ul>
+                    <div class="project__tags">
+                        <span class="tag">Git</span>
+                        <span class="tag">Kubernetes</span>
+                        <span class="tag">Helm</span>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project">
+                    <div class="project__header">
+                        <h4 class="project__title">사내 솔루션 Container화 및 Helm 패키징</h4>
+                        <span class="project__date">2024.08 — 2024.10</span>
+                    </div>
+                    <p class="project__desc">Spring Boot 기반 온프레미스 서버 감시 솔루션을 Kubernetes 환경으로 마이그레이션하고, Helm Chart로 배포 프로세스 표준화.</p>
+                    <ul class="project__bullets">
+                        <li>기존 프로세스 구동 방식의 솔루션을 Docker 컨테이너로 전환, K8s 클러스터 배포 아키텍처 설계</li>
+                        <li>Helm Chart 패키징으로 배포 및 안정화 소요 시간을 3일에서 1일로 단축</li>
+                        <li>Kafka, Redis 등 공통 컴포넌트를 Sub-chart로 모듈화, K8s DNS 활용해 환경별 설정 변경 최소화</li>
+                        <li>Helm Install 가이드 및 배포 절차 문서화, 신규 인원 온보딩 비용 절감</li>
+                    </ul>
+                    <div class="project__tags">
+                        <span class="tag">Kubernetes</span>
+                        <span class="tag">Docker</span>
+                        <span class="tag">Helm</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section>
-            <h2>EDUCATION</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">2020.03 &mdash; 2025.02</div>
-                    <div class="timeline-content">
-                        <h3>대학교명 <span class="position">/ 컴퓨터공학과</span></h3>
+        <!-- Side Projects -->
+        <section class="section">
+            <h2 class="section__title">Side Projects</h2>
+            <div class="side-projects">
+                <a href="https://github.com/taeyeongryu/phototofen" target="_blank" rel="noopener" class="side-project-card">
+                    <div class="side-project-card__img side-project-card__img--1">PhotoToFen</div>
+                    <h4 class="side-project-card__title">PhotoToFen</h4>
+                    <p class="side-project-card__desc">체스 퍼즐 이미지를 FEN 표기법으로 자동 변환하는 웹 애플리케이션. 이미지 업로드 후 CNN 기반 기물 분류를 통해 Lichess/Stockfish에서 즉시 분석 가능한 FEN을 생성.</p>
+                    <div class="project__tags">
+                        <span class="tag">React</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">FastAPI</span>
+                        <span class="tag">PyTorch</span>
+                        <span class="tag">OpenCV</span>
                     </div>
+                </a>
+                <a href="https://github.com/taeyeongryu/resumate" target="_blank" rel="noopener" class="side-project-card">
+                    <div class="side-project-card__img side-project-card__img--2">Resumate</div>
+                    <h4 class="side-project-card__title">Resumate</h4>
+                    <p class="side-project-card__desc">커리어 경험을 자유롭게 기록하고, AI(Claude Code)와의 대화를 통해 이력서에 바로 쓸 수 있는 구조화된 YAML 데이터로 변환하는 CLI 도구.</p>
+                    <div class="project__tags">
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">Claude Code</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section class="section">
+            <h2 class="section__title">Education</h2>
+            <div class="education__item">
+                <div class="education__info">
+                    <span class="education__name">삼성 청년 SW 아카데미(SSAFY)</span>
+                    <span class="education__detail">수료 (1등)</span>
+                </div>
+                <span class="education__date">2023.01 — 2023.12</span>
+            </div>
+            <div class="education__item">
+                <div class="education__info">
+                    <span class="education__name">상명대학교</span>
+                    <span class="education__detail">수학교육과(심화전공) 졸업</span>
+                </div>
+                <span class="education__date">2016.03 — 2022.02</span>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="section">
+            <h2 class="section__title">Skills</h2>
+            <div class="skills">
+                <div class="skills__row">
+                    <span class="skills__category">Backend</span>
+                    <span class="skills__items">Java, Spring Boot, Spring Framework</span>
+                </div>
+                <div class="skills__row">
+                    <span class="skills__category">Infrastructure</span>
+                    <span class="skills__items">Kubernetes, Docker, Helm, Linux</span>
+                </div>
+                <div class="skills__row">
+                    <span class="skills__category">Database</span>
+                    <span class="skills__items">MySQL, MariaDB</span>
+                </div>
+                <div class="skills__row">
+                    <span class="skills__category">Messaging</span>
+                    <span class="skills__items">Apache Kafka</span>
+                </div>
+                <div class="skills__row">
+                    <span class="skills__category">Frontend</span>
+                    <span class="skills__items">Vue.js</span>
                 </div>
             </div>
         </section>
 
-        <section>
-            <h2>SKILLS</h2>
-            <div class="skills-list">
-                <div class="skill-row">
-                    <span class="skill-category">Backend</span>
-                    <span class="skill-items">Java / Spring Boot, Python, Node.js</span>
-                </div>
-                <div class="skill-row">
-                    <span class="skill-category">Database</span>
-                    <span class="skill-items">MySQL, Redis, MongoDB</span>
-                </div>
-                <div class="skill-row">
-                    <span class="skill-category">DevOps</span>
-                    <span class="skill-items">Docker, AWS, Git</span>
-                </div>
-            </div>
+        <!-- Certificates -->
+        <section class="section">
+            <h2 class="section__title">Certificates</h2>
+            <ul class="certs">
+                <li class="certs__item">CKAD <span class="certs__date">2025.10</span></li>
+                <li class="certs__item">AWS SAA <span class="certs__date">2024.02</span></li>
+                <li class="certs__item">SQLD <span class="certs__date">2023.10</span></li>
+                <li class="certs__item">정보처리기사 <span class="certs__date">2023.09</span></li>
+            </ul>
         </section>
 
-        <section>
-            <h2>PROJECTS</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">2024</div>
-                    <div class="timeline-content">
-                        <h3>프로젝트 1</h3>
-                        <p>프로젝트 설명을 작성하세요.</p>
-                        <div class="tech-tags">
-                            <span>Spring Boot</span>
-                            <span>MySQL</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2024</div>
-                    <div class="timeline-content">
-                        <h3>프로젝트 2</h3>
-                        <p>프로젝트 설명을 작성하세요.</p>
-                        <div class="tech-tags">
-                            <span>React</span>
-                            <span>Node.js</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <!-- Language -->
+        <section class="section">
+            <h2 class="section__title">Language</h2>
+            <p class="language__text">영어: 토익스피킹 150 <span class="language__date">(2025.12)</span></p>
         </section>
+    </div>
 
-        <section>
-            <h2>CERTIFICATES</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">2024</div>
-                    <div class="timeline-content">
-                        <h3>자격증/수상명</h3>
-                        <p>발급 기관</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+    <script>
+    (function() {
+        // Career duration
+        const start = new Date(2024, 3, 22);
+        const now = new Date();
+        let months = (now.getFullYear() - start.getFullYear()) * 12 + (now.getMonth() - start.getMonth());
+        if (now.getDate() < start.getDate()) months--;
+        const y = Math.floor(months / 12);
+        const m = months % 12;
+        const text = (y > 0 ? y + '년 ' : '') + m + '개월';
+        document.getElementById('career-duration').textContent = text;
+
+        // Scroll animation
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.section').forEach(function(el) {
+            observer.observe(el);
+        });
+    })();
+    </script>
 </body>
 </html>
